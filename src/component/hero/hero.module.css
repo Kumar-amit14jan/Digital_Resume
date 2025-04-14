@@ -27,6 +27,31 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    display: inline-block;
+    white-space: nowrap;
+    animation: typing 2s steps(14) forwards,
+        backspace 2s steps(14) 2.5s forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 14ch;
+    }
+}
+
+@keyframes deleting {
+    from {
+        width: 14ch;
+    }
+
+    to {
+        width: 0;
+    }
 }
 
 .description {
@@ -71,40 +96,46 @@
     }
 }
 
-.bottomBlur{
+.bottomBlur {
     position: absolute;
     height: 50vh;
     width: 70vw;
     min-height: 350px;
     min-width: 250px;
-    top:246px;
-    right:-25vw;
-    border-radius:764px;
-    background: rgba(25,55,109,0.7);
+    top: 246px;
+    right: -25vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
     filter: blur(100px);
     z-index: 0;
 }
 
-.topBlur{
+.topBlur {
     position: absolute;
     height: 50vh;
     width: 50vw;
     min-height: 350px;
     min-width: 350px;
-    top:-128px;
-    left:-10vw;
-    border-radius:764px;
-    background: rgba(25,55,109,0.7);
+    top: -128px;
+    left: -10vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
     filter: blur(100px);
     z-index: 0;
 }
 
 /* media query for responsive */
-@media screen and (max-width:830px){
-    .container{
+@media screen and (max-width:830px) {
+    .container {
         flex-direction: column-reverse;
     }
-    .content{
+
+    .content {
         align-items: center;
     }
+    .title {
+        font-size: 42px;
+        width: fit-content;
+        max-width: 100%;
+      }
 }
