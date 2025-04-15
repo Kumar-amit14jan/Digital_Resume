@@ -28,14 +28,7 @@ export const skills = [
     "title": "JavaScript",
     "imageSrc": figma
   },
-  {
-    "title": "TypeScript",
-    "imageSrc": figma
-  },
-  {
-    "title": "Docker",
-    "imageSrc": figma
-  },
+ 
   {
     "title": "Figma",
     "imageSrc": figma
