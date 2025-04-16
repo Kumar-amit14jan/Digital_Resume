@@ -17,7 +17,7 @@ export function ProjectCard(projectInfo) {
                     })
                 }
             </ul>
-            <div>
+            <div className={styles.links}>
                 <a href={project.demo} className={styles.link}>Demo</a>
                 <a href={project.source} className={styles.link}>Source</a>
             </div>
